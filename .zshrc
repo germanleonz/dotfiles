@@ -18,6 +18,7 @@ antigen bundle web-search
 antigen bundle docker
 antigen bundle jsontools
 antigen bundle extract
+antigen bundle python
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -31,15 +32,11 @@ antigen apply
 #bindkey -v
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='gvim'
-fi
+export EDITOR='vim'
 
 # Aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
 # Default user
 export DEFAULT_USER="germanleonz"
@@ -48,36 +45,30 @@ export DEFAULT_USER="germanleonz"
 export GOPATH=$HOME/programacion/go
 
 # Path
-PATH=/home/germanleonz/.rvm/gems/ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rvm/gems/ruby-2.2.1@global/bin
-PATH=$PATH:/home/germanleonz/.rvm/rubies/ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rbenv/plugins/ruby-build/bin
-PATH=$PATH:/home/germanleonz/.rbenv/shims
-PATH=$PATH:/home/germanleonz/.rbenv/bin
-PATH=$PATH:/home/germanleonz/.local/bin
-PATH=$PATH:/home/germanleonz/.rvm/gems:ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rvm/rubies/ruby-2.2.1/bin  
-PATH=$PATH:/home/germanleonz/.npm-global/bin
-PATH=$PATH:/usr/local/sbin
+PATH=/usr/local/sbin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/usr/bin
-PATH=$PATH:/sbin:/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/bin
 PATH=$PATH:/usr/games
 PATH=$PATH:/usr/local/games
-PATH=$PATH:/home/germanleonz/.rvm/bin
-PATH=$PATH:/home/germanleonz/.rvm/bin
-PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-PATH=$PATH:/usr/local/heroku/bin                                  # Heroku Toolbelt
-PATH=$PATH:/home/germanleonz/.apps/idea-IU-141.1532.4/bin         # IntelliJ Idea 14
-PATH=$PATH:/home/germanleonz/programacion/sift_0.7.1_linux_amd64/ # Sift Tool
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.2.1/bin
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.2.1@global/bin
+PATH=$PATH:$HOME/.rvm/rubies/ruby-2.2.1/bin
+PATH=$PATH:$HOME/.rbenv/plugins/ruby-build/bin
+PATH=$PATH:$HOME/.rbenv/shims
+PATH=$PATH:$HOME/.rbenv/bin
+PATH=$PATH:$HOME/.npm-global/bin
+PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:/usr/local/go/bin                          # Golang
+PATH=$PATH:$GOPATH/bin                                # Golang
+PATH=$PATH:/usr/local/heroku/bin                      # Heroku Toolbelt
+PATH=$PATH:$HOME/.apps/idea-IU-141.1532.4/bin         # IntelliJ Idea 14
+PATH=$PATH:$HOME/programacion/sift_0.7.1_linux_amd64/ # Sift Tool
 export PATH
-
-# Jira plugin configuration
-export JIRA_URL="http://jira.channel-corp.com:8080"
-export JIRA_NAME="gleon"
-export JIRA_PREFIX="RE-"
-export JIRA_DEFAULT_ACTION="dashboard"
 
 # Color for CSApprox
 export TERM=xterm-256color
@@ -89,6 +80,12 @@ fi
 
 # GitHub's hub
 eval "$(hub alias -s)"
+
+# Jira plugin configuration
+export JIRA_URL="http://jira.channel-corp.com:8080"
+export JIRA_NAME="gleon"
+export JIRA_PREFIX="RE-"
+export JIRA_DEFAULT_ACTION="dashboard"
 
 # Retail Enterprise - Environment Variables
 export WORKON_HOME=$HOME/.virtualenvs
