@@ -18,6 +18,8 @@ antigen bundle web-search
 antigen bundle docker
 antigen bundle jsontools
 antigen bundle extract
+antigen bundle gitfast
+antigen bundle command-not-found
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -31,11 +33,7 @@ antigen apply
 #bindkey -v
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='gvim'
-fi
+export EDITOR='vim'
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
@@ -45,7 +43,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 export DEFAULT_USER="germanleonz"
 
 # Golang configuration
-export GOPATH=$HOME/programacion/go
+export GOPATH=$HOME/work
 
 # Path
 PATH=/home/germanleonz/.rvm/gems/ruby-2.2.1/bin
@@ -67,10 +65,11 @@ PATH=$PATH:/usr/games
 PATH=$PATH:/usr/local/games
 PATH=$PATH:/home/germanleonz/.rvm/bin
 PATH=$PATH:/home/germanleonz/.rvm/bin
-PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:$GOPATH/bin
 PATH=$PATH:/usr/local/heroku/bin                                  # Heroku Toolbelt
 PATH=$PATH:/home/germanleonz/.apps/idea-IU-141.1532.4/bin         # IntelliJ Idea 14
-PATH=$PATH:/home/germanleonz/programacion/sift_0.7.1_linux_amd64/ # Sift Tool
+PATH=$PATH:/home/germanleonz/bin/sift_0.7.1_linux_amd64/          # Sift
 export PATH
 
 # Jira plugin configuration
