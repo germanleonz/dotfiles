@@ -3,10 +3,12 @@
 #
 
 # Load antigen
-source /home/germanleonz/.dotfiles/antigen/antigen.zsh
+source $HOME/.dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
+
+fpath=(~/.zsh $fpath)
 
 # robbyrussell's bundles
 antigen bundle git
@@ -46,16 +48,16 @@ export DEFAULT_USER="germanleonz"
 export GOPATH=$HOME/work
 
 # Path
-PATH=/home/germanleonz/.rvm/gems/ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rvm/gems/ruby-2.2.1@global/bin
-PATH=$PATH:/home/germanleonz/.rvm/rubies/ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rbenv/plugins/ruby-build/bin
-PATH=$PATH:/home/germanleonz/.rbenv/shims
-PATH=$PATH:/home/germanleonz/.rbenv/bin
-PATH=$PATH:/home/germanleonz/.local/bin
-PATH=$PATH:/home/germanleonz/.rvm/gems:ruby-2.2.1/bin
-PATH=$PATH:/home/germanleonz/.rvm/rubies/ruby-2.2.1/bin  
-PATH=$PATH:/home/germanleonz/.npm-global/bin
+PATH=$HOME/.rvm/gems/ruby-2.2.1/bin
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.2.1@global/bin
+PATH=$PATH:$HOME/.rvm/rubies/ruby-2.2.1/bin
+PATH=$PATH:$HOME/.rbenv/plugins/ruby-build/bin
+PATH=$PATH:$HOME/.rbenv/shims
+PATH=$PATH:$HOME/.rbenv/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.rvm/gems:ruby-2.2.1/bin
+PATH=$PATH:$HOME/.rvm/rubies/ruby-2.2.1/bin  
+PATH=$PATH:$HOME/.npm-global/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/sbin
@@ -63,13 +65,13 @@ PATH=$PATH:/usr/bin
 PATH=$PATH:/sbin:/bin
 PATH=$PATH:/usr/games
 PATH=$PATH:/usr/local/games
-PATH=$PATH:/home/germanleonz/.rvm/bin
-PATH=$PATH:/home/germanleonz/.rvm/bin
+PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$HOME/.rvm/bin
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:$GOPATH/bin
-PATH=$PATH:/usr/local/heroku/bin                                  # Heroku Toolbelt
-PATH=$PATH:/home/germanleonz/.apps/idea-IU-141.1532.4/bin         # IntelliJ Idea 14
-PATH=$PATH:/home/germanleonz/bin/sift_0.7.1_linux_amd64/          # Sift
+PATH=$PATH:/usr/local/heroku/bin                      # Heroku Toolbelt
+PATH=$PATH:$HOME/.apps/idea-IU-141.1532.4/bin         # IntelliJ Idea 14
+PATH=$PATH:$HOME/bin/sift_0.7.1_linux_amd64/          # Sift
 export PATH
 
 # Jira plugin configuration
@@ -92,5 +94,5 @@ eval "$(hub alias -s)"
 # Retail Enterprise - Environment Variables
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-export PYTHONPATH=/home/germanleonz/dev/RetailEnterprise/retail_api
+export PYTHONPATH=$HOME/dev/RetailEnterprise/retail_api
 . ~/.retail_vars.sh
