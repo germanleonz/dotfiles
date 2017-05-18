@@ -90,9 +90,3 @@ fi
 
 # GitHub's hub
 eval "$(hub alias -s)"
-
-# Retail Enterprise - Environment Variables
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-export PYTHONPATH=$HOME/dev/RetailEnterprise/retail_api
-. ~/.retail_vars.sh
