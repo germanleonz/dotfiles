@@ -5,6 +5,7 @@ fpath=(~/.zsh $fpath)
 
 # robbyrussell's bundles
 antigen bundle git
+antigen bundle github
 antigen bundle jira
 antigen bundle z
 antigen bundle sudo
@@ -16,6 +17,8 @@ antigen bundle extract
 antigen bundle gitfast
 antigen bundle command-not-found
 antigen bundle rails
+antigen bundle supercrabtree/k
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
