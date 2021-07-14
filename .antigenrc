@@ -18,12 +18,13 @@ antigen bundle gitfast
 antigen bundle command-not-found
 antigen bundle rails
 antigen bundle supercrabtree/k
+antigen bundle poetry
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Theme
-antigen theme agnoster
+antigen theme romkatv/powerlevel10k
 
 antigen apply
