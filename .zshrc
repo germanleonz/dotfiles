@@ -22,6 +22,9 @@ export DEFAULT_USER="germanleonz"
 # Golang configuration
 export GOPATH=$HOME/work
 
+# OhMyZsh custom folder
+export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+
 # Path
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.npm-global/bin
@@ -35,11 +38,15 @@ PATH=$PATH:/usr/local/games
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/bin/sift_0.7.1_linux_amd64/          # Sift
+PATH=$PATH:/usr/local/opt/postgresql@11/bin
+PATH=$PATH:$HOME/prog/confluent-6.2.0/bin
 export PATH
 
-export LDFLAGS="-L/usr/local/opt/zlib/lib"
+#export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export LDFLAGS="-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib"
  # For pkg-config to find zlib you may need to set: export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
-export CPPFLAGS="-I/usr/local/opt/zlib/include"
+#export CPPFLAGS="-I/usr/local/opt/zlib/include"
+export CPPFLAGS="-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include"
 
 # Ruby
 eval "$(rbenv init -)"
@@ -84,5 +91,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Direnv
 eval "$(direnv hook zsh)"
 
+# WS Germinate 
+alias germinate=$HOME/ws/germinate/bin/germinate

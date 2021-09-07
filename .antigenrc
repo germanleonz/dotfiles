@@ -19,6 +19,7 @@ antigen bundle command-not-found
 antigen bundle rails
 antigen bundle supercrabtree/k
 antigen bundle poetry
+antigen bundle aws/aws-cli
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Syntax highlighting bundle
