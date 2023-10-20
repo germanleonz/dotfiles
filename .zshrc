@@ -21,7 +21,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 export DEFAULT_USER="germanleonz"
 
 # Golang configuration
-export GOPATH=$HOME/work
+export GOBIN=$HOME/prog/go/
+export GOPATH=$HOME/prog/go/src
 
 # OhMyZsh custom folder
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
@@ -93,12 +94,31 @@ export PATH="$PYENV_ROOT/shims:$PATH"
 _evalcache pyenv init -
 
 # NVM
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Direnv
 _evalcache direnv hook zsh
 
 # WS Germinate 
-alias germinate=$HOME/ws/germinate/bin/germinate
+#alias germinate=$HOME/ws/germinate/bin/germinate
+#source /Users/gzapata/.config/wealthsimple/rbenv/config.zsh
+#source /Users/gzapata/.config/wealthsimple/nvm/config.zsh
+
+# Android Home
+export ANDROID_HOME=/Users/gzapata/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+# Android SDK
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+
+# Wealthsimple CLI
+eval "$(ws hook zsh)"
+
+# Issues with ruby and forks
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export PATH="/Users/gzapata/ws/ares/node_modules/@wealthsimple/transinator:$PATH"
