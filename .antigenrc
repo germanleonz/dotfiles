@@ -18,6 +18,7 @@ antigen bundle extract
 antigen bundle gitfast
 antigen bundle command-not-found
 antigen bundle rails
+antigen bundle bundler
 antigen bundle supercrabtree/k
 antigen bundle poetry
 antigen bundle aws/aws-cli
